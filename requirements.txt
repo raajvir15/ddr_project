@@ -1,0 +1,6 @@
+pymupdf
+Pillow
+imagehash
+streamlit
+python-docx
+anthropic
