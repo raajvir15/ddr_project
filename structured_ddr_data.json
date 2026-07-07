@@ -1,0 +1,371 @@
+{
+  "areas": [
+    {
+      "area_num": 1,
+      "negative_description": "Hall Skirting level Dampness",
+      "negative_photos": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "positive_description": "Common Bathroom tile hollowness",
+      "positive_photos": [
+        8,
+        9,
+        10,
+        11
+      ],
+      "negative_photos_inferred": false,
+      "positive_description_suspicious": false,
+      "thermal_readings": [
+        {
+          "page_num": 28,
+          "filename": "RB02377X",
+          "hotspot_c": 26.9,
+          "coldspot_c": 21.9,
+          "date": "27/09/22"
+        },
+        {
+          "page_num": 29,
+          "filename": "RB02378X",
+          "hotspot_c": 26.4,
+          "coldspot_c": 21.4,
+          "date": "27/09/22"
+        },
+        {
+          "page_num": 30,
+          "filename": "RB02379X",
+          "hotspot_c": 27.8,
+          "coldspot_c": 22.8,
+          "date": "27/09/22"
+        },
+        {
+          "page_num": 1,
+          "filename": "RB02380X",
+          "hotspot_c": 28.8,
+          "coldspot_c": 23.4,
+          "date": "27/09/22"
+        },
+        {
+          "page_num": 18,
+          "filename": "RB02381X",
+          "hotspot_c": 27.0,
+          "coldspot_c": 22.0,
+          "date": "27/09/22"
+        },
+        {
+          "page_num": 19,
+          "filename": "RB02382X",
+          "hotspot_c": 26.7,
+          "coldspot_c": 21.7,
+          "date": "27/09/22"
+        },
+        {
+          "page_num": 20,
+          "filename": "RB02383X",
+          "hotspot_c": 26.5,
+          "coldspot_c": 21.5,
+          "date": "27/09/22"
+        }
+      ]
+    },
+    {
+      "area_num": 2,
+      "negative_description": "Bedroom Skirting level Dampness",
+      "negative_photos": [
+        12,
+        13,
+        14
+      ],
+      "positive_description": "Common Bathroom tile hollowness",
+      "positive_photos": [
+        15,
+        16,
+        17,
+        18,
+        19
+      ],
+      "negative_photos_inferred": true,
+      "positive_description_suspicious": false,
+      "thermal_readings": [
+        {
+          "page_num": 21,
+          "filename": "RB02384X",
+          "hotspot_c": 27.3,
+          "coldspot_c": 22.3,
+          "date": "27/09/22"
+        },
+        {
+          "page_num": 22,
+          "filename": "RB02385X",
+          "hotspot_c": 27.3,
+          "coldspot_c": 22.3,
+          "date": "27/09/22"
+        },
+        {
+          "page_num": 2,
+          "filename": "RB02386X",
+          "hotspot_c": 27.4,
+          "coldspot_c": 22.4,
+          "date": "27/09/22"
+        }
+      ]
+    },
+    {
+      "area_num": 3,
+      "negative_description": "Master bedroom Skirting level Dampness",
+      "negative_photos": [
+        20,
+        21,
+        22,
+        23,
+        24,
+        25
+      ],
+      "positive_description": "MB Bathroom tile hollowness",
+      "positive_photos": [
+        26,
+        27,
+        28,
+        29,
+        30
+      ],
+      "negative_photos_inferred": false,
+      "positive_description_suspicious": false,
+      "thermal_readings": [
+        {
+          "page_num": 23,
+          "filename": "RB02387X",
+          "hotspot_c": 25.2,
+          "coldspot_c": 20.2,
+          "date": "27/09/22"
+        },
+        {
+          "page_num": 24,
+          "filename": "RB02388X",
+          "hotspot_c": 25.1,
+          "coldspot_c": 20.1,
+          "date": "27/09/22"
+        },
+        {
+          "page_num": 25,
+          "filename": "RB02389X",
+          "hotspot_c": 25.9,
+          "coldspot_c": 20.9,
+          "date": "27/09/22"
+        },
+        {
+          "page_num": 26,
+          "filename": "RB02390X",
+          "hotspot_c": 26.9,
+          "coldspot_c": 21.9,
+          "date": "27/09/22"
+        },
+        {
+          "page_num": 27,
+          "filename": "RB02391X",
+          "hotspot_c": 25.6,
+          "coldspot_c": 20.6,
+          "date": "27/09/22"
+        },
+        {
+          "page_num": 9,
+          "filename": "RB02392X",
+          "hotspot_c": 25.8,
+          "coldspot_c": 20.8,
+          "date": "27/09/22"
+        }
+      ]
+    },
+    {
+      "area_num": 4,
+      "negative_description": "Kitchen Skirting level Dampness",
+      "negative_photos": [
+        31,
+        32
+      ],
+      "positive_description": "Master bedroom bathroom",
+      "positive_photos": [
+        33,
+        34,
+        35,
+        36,
+        37
+      ],
+      "negative_photos_inferred": false,
+      "positive_description_suspicious": false,
+      "thermal_readings": [
+        {
+          "page_num": 10,
+          "filename": "RB02393X",
+          "hotspot_c": 25.9,
+          "coldspot_c": 20.9,
+          "date": "27/09/22"
+        },
+        {
+          "page_num": 11,
+          "filename": "RB02394X",
+          "hotspot_c": 26.0,
+          "coldspot_c": 21.0,
+          "date": "27/09/22"
+        }
+      ]
+    },
+    {
+      "area_num": 5,
+      "negative_description": "Master bedroom wall damness",
+      "negative_photos": [
+        38,
+        39,
+        40,
+        41
+      ],
+      "positive_description": "External wall crack and Duct Issue",
+      "positive_photos": [
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48
+      ],
+      "negative_photos_inferred": false,
+      "positive_description_suspicious": false,
+      "thermal_readings": [
+        {
+          "page_num": 3,
+          "filename": "RB02395X",
+          "hotspot_c": 27.0,
+          "coldspot_c": 22.0,
+          "date": "27/09/22"
+        },
+        {
+          "page_num": 12,
+          "filename": "RB02396X",
+          "hotspot_c": 26.1,
+          "coldspot_c": 21.1,
+          "date": "27/09/22"
+        },
+        {
+          "page_num": 13,
+          "filename": "RB02397X",
+          "hotspot_c": 26.3,
+          "coldspot_c": 21.3,
+          "date": "27/09/22"
+        },
+        {
+          "page_num": 14,
+          "filename": "RB02398X",
+          "hotspot_c": 25.6,
+          "coldspot_c": 20.6,
+          "date": "27/09/22"
+        }
+      ]
+    },
+    {
+      "area_num": 6,
+      "negative_description": "Parking Area seepage",
+      "negative_photos": [
+        49,
+        50,
+        51,
+        52
+      ],
+      "positive_description": "Common Bathroom tile hollowness and plumbing issue",
+      "positive_photos": [
+        53,
+        54,
+        55,
+        56,
+        57
+      ],
+      "negative_photos_inferred": false,
+      "positive_description_suspicious": false,
+      "thermal_readings": [
+        {
+          "page_num": 15,
+          "filename": "RB02399X",
+          "hotspot_c": 26.5,
+          "coldspot_c": 21.5,
+          "date": "27/09/22"
+        },
+        {
+          "page_num": 16,
+          "filename": "RB02400X",
+          "hotspot_c": 25.2,
+          "coldspot_c": 20.2,
+          "date": "27/09/22"
+        },
+        {
+          "page_num": 17,
+          "filename": "RB02401X",
+          "hotspot_c": 25.6,
+          "coldspot_c": 20.6,
+          "date": "27/09/22"
+        },
+        {
+          "page_num": 4,
+          "filename": "RB02402X",
+          "hotspot_c": 25.7,
+          "coldspot_c": 20.7,
+          "date": "27/09/22"
+        }
+      ]
+    },
+    {
+      "area_num": 7,
+      "negative_description": "Common Bathroom Ceiling Dampness",
+      "negative_photos": [
+        58
+      ],
+      "positive_description": "Flat no 203 tile joint open and",
+      "positive_photos": [
+        59,
+        60,
+        61,
+        62,
+        63,
+        64
+      ],
+      "negative_photos_inferred": false,
+      "positive_description_suspicious": true,
+      "thermal_readings": [
+        {
+          "page_num": 5,
+          "filename": "RB02403X",
+          "hotspot_c": 25.5,
+          "coldspot_c": 20.5,
+          "date": "27/09/22"
+        }
+      ]
+    }
+  ],
+  "unassigned_thermal_readings": [
+    {
+      "page_num": 6,
+      "filename": "RB02404X",
+      "hotspot_c": 25.8,
+      "coldspot_c": 20.8,
+      "date": "27/09/22"
+    },
+    {
+      "page_num": 7,
+      "filename": "RB02405X",
+      "hotspot_c": 26.2,
+      "coldspot_c": 21.2,
+      "date": "27/09/22"
+    },
+    {
+      "page_num": 8,
+      "filename": "RB02406X",
+      "hotspot_c": 26.5,
+      "coldspot_c": 21.5,
+      "date": "27/09/22"
+    }
+  ]
+}
