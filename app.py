@@ -5,7 +5,7 @@ from pathlib import Path
 from dotenv import load_dotenv
 
 PROJECT_ROOT = Path(__file__).resolve().parent
-load_dotenv(PROJECT_ROOT / ".env")
+load_dotenv(PROJECT_ROOT / ".env")  # only does anything locally, harmless if .env is missing
 
 from pipeline.parse_thermal import run_thermal_extraction
 from pipeline.parse_sample import run_sample_report_parsing
@@ -26,9 +26,13 @@ thermal_file = st.file_uploader("Thermal Imaging Report (PDF)", type="pdf")
 
 if inspection_file and thermal_file:
     if st.button("Generate DDR Report"):
-        api_key = os.environ.get("GEMINI_API_KEY")
+        # Check Streamlit secrets first (cloud), fall back to .env (local)
+        api_key = st.secrets.get("GEMINI_API_KEY") if hasattr(st, "secrets") else None
         if not api_key:
-            st.error("GEMINI_API_KEY not found. Check your .env file.")
+            api_key = os.environ.get("GEMINI_API_KEY")
+
+        if not api_key:
+            st.error("GEMINI_API_KEY not found. Set it in Streamlit Secrets (cloud) or your .env file (local).")
             st.stop()
 
         with tempfile.TemporaryDirectory() as tmpdir:
