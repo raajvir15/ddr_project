@@ -1,6 +1,12 @@
 import fitz
 import re
 import json
+from pathlib import Path
+
+PROJECT_ROOT = Path(__file__).resolve().parent.parent
+INPUTS_DIR = PROJECT_ROOT / "inputs"
+OUTPUTS_DIR = PROJECT_ROOT / "outputs"
+
 
 def extract_pages_text(pdf_path):
     doc = fitz.open(pdf_path)
@@ -9,6 +15,7 @@ def extract_pages_text(pdf_path):
         pages.append({"page_num": i + 1, "text": doc[i].get_text()})
     doc.close()
     return pages
+
 
 def parse_thermal_page(page):
     text = page["text"]
@@ -24,23 +31,23 @@ def parse_thermal_page(page):
         "date": date.group(1) if date else None,
     }
 
-thermal_pages = extract_pages_text("Thermal_Images.pdf")
-parsed = [parse_thermal_page(p) for p in thermal_pages]
 
-for row in parsed:
-    print(row)
+def run_thermal_extraction(pdf_path):
+    pages = extract_pages_text(pdf_path)
+    parsed = [parse_thermal_page(p) for p in pages]
 
-with open("thermal_parsed.json", "w") as f:
-    json.dump(parsed, f, indent=2)
+    def filename_number(row):
+        return int(row["filename"][2:-1]) if row["filename"] else 0
 
-# Sort by the numeric part of the filename (RB02377X -> 2377)
-def filename_number(row):
-    return int(row["filename"][2:-1])  # strips "RB" prefix and "X" suffix
+    return sorted(parsed, key=filename_number)
 
-parsed_sorted = sorted(parsed, key=filename_number)
 
-for row in parsed_sorted:
-    print(row["filename"], row["hotspot_c"], row["coldspot_c"])
+if __name__ == "__main__":
+    result = run_thermal_extraction(str(INPUTS_DIR / "Thermal_Images.pdf"))
+    for row in result:
+        print(row["filename"], row["hotspot_c"], row["coldspot_c"])
 
-with open("thermal_parsed_sorted.json", "w") as f:
-    json.dump(parsed_sorted, f, indent=2)
+    OUTPUTS_DIR.mkdir(exist_ok=True)
+    with open(OUTPUTS_DIR / "thermal_parsed_sorted.json", "w") as f:
+        json.dump(result, f, indent=2)
+    print(f"\nSaved to {OUTPUTS_DIR / 'thermal_parsed_sorted.json'}")
