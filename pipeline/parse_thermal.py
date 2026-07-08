@@ -1,3 +1,8 @@
+## PIpleine step 1: parse thermal images
+## This file is to Read the thermal_images pdf and convert the raw thermal camera output into
+## a clean, orderly corrwct list of readings
+
+
 import fitz
 import re
 import json
@@ -15,6 +20,7 @@ def extract_pages_text(pdf_path):
         pages.append({"page_num": i + 1, "text": doc[i].get_text()})
     doc.close()
     return pages
+## this function iterates through pages of the pdf and returns each page
 
 
 def parse_thermal_page(page):
@@ -30,6 +36,9 @@ def parse_thermal_page(page):
         "coldspot_c": float(coldspot.group(1)) if coldspot else None,
         "date": date.group(1) if date else None,
     }
+## this parse_thermal_page takes one page of raw text and takes out four specific things using
+## regex and throws away everything else. filename, hotsepot, coldspot, and date for each page
+
 
 
 def run_thermal_extraction(pdf_path):
@@ -40,6 +49,10 @@ def run_thermal_extraction(pdf_path):
         return int(row["filename"][2:-1]) if row["filename"] else 0
 
     return sorted(parsed, key=filename_number)
+
+## this file traverses through each page using extract_page function, 
+# then it uses parse_thermal function to put the values into a dictionary
+# then it sorts the photos in ascending order as they were scrambled
 
 
 if __name__ == "__main__":

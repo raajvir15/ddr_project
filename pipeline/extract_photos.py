@@ -45,6 +45,9 @@ def extract_appendix_photos(pdf_path, out_dir, start_page=11, end_page=23):
     doc.close()
     return saved
 
+##  goes into a specific range of PDF pages, finds every real photo, throws out 
+# icons and duplicates, and saves each unique one as its own file
+
 
 def run_photo_extraction(pdf_path, out_dir, total_expected=64):
     saved = extract_appendix_photos(pdf_path, out_dir)
@@ -57,6 +60,9 @@ def run_photo_extraction(pdf_path, out_dir, total_expected=64):
             photo_manifest[i] = {"path": None, "available": False}
 
     return photo_manifest
+
+# # takes whatever photos were actually successfully extracted, and builds a 
+# complete accounting of all 64 expected photo numbers — including the ones that couldn't be found
 
 
 if __name__ == "__main__":

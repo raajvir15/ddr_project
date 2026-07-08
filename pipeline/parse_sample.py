@@ -27,10 +27,13 @@ def extract_between(text, start_marker, end_marker):
     else:
         end_idx = len(text)
     return text[start_idx:end_idx]
+## what this function does is that if we give it a starting string and an ending string, 
+# it will give a chunk of text that is between those two strings and throws away everything else
 
 
 def extract_photo_numbers(text):
     return [int(n) for n in re.findall(r'Photo\s+(\d+)', text)]
+#used to find photos whithin the given chunk
 
 
 def clean(text):
@@ -65,6 +68,13 @@ def parse_impacted_areas(full_text):
             "positive_photos": pos_photos,
         })
     return areas
+## this function cuts the intire text into 7 different chunks
+# it finds where "imacted area" is written and then cut it from there and the chunk 
+# ends before the part where next "impacted area" is written
+# then it calls extract_between to find the conetnt bw negative and positive side
+# it also searches the chunk for any photos and keeps them seperately
+
+
 
 
 def fill_missing_photo_gaps(areas):
@@ -78,6 +88,9 @@ def fill_missing_photo_gaps(areas):
         else:
             area["negative_photos_inferred"] = False
     return areas
+
+# this function is used to fix an issue where if any photos list comes out to be empty for a chunk
+## it tries to find what the mssing numbers where (this happened in section 2)
 
 
 def flag_suspicious_text(areas):
@@ -97,6 +110,9 @@ def assign_thermal_to_areas(areas, thermal_readings):
         idx += count
     leftover = thermal_readings[idx:]
     return areas, leftover
+
+#  takes the 30 sorted thermal readings and the 7 areas, and figures out which
+#  readings likely belong to which area without ever forcing to match something uncertain
 
 
 def run_sample_report_parsing(pdf_path, thermal_readings):
